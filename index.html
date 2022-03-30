@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <title>Harry Potter - Memory Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+</head>
+<body>
+
+    <audio id="audio">
+        <source src="assets/sounds/HedwigsThemeTrap.mp3" type="audio/mpeg">
+    </audio>
+
+    
+
+
+<h1 onclick="playRandomSound()" id="title">Harry Potter Memory Game</h1>
+
+<button class="btn" id="btn-play" >
+    <i class="fa-solid fa-play"></i>
+</button>
+
+<button class="btn" id="btn-pause">
+    <i class="fa-solid fa-pause"></i>
+</button> 
+<p id="score">Score: 0</p>
+<div id="memory-game">
+
+    <div class="card" data-character="harry">
+        <img class="front" src="assets/images/HarryPotter.jpg" alt="Harry">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="harry">
+        <img class="front" src="assets/images/HarryPotter.jpg" alt="Harry">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+
+    <div class="card" data-character="hermione">
+        <img class="front" src="assets/images/Hermione.jpg" alt="Hermione">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="hermione">
+        <img class="front" src="assets/images/Hermione.jpg" alt="Hermione">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+    <div class="card" data-character="voldemort">
+        <img class="front" src="assets/images/LordVoldemort.jpg" alt="Voldemort">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="voldemort">
+        <img class="front" src="assets/images/LordVoldemort.jpg" alt="Voldemort">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+ 
+    <div class="card" data-character="ronald">
+        <img class="front" src="assets/images/RonaldWeasley.jpg" alt="Ron Weasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="ronald">
+        <img class="front" src="assets/images/RonaldWeasley.jpg" alt="Ron Weasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    
+
+    <div class="card" data-character="dumbledore">
+        <img class="front" src="assets/images/AlbusDumbledore.jpg" alt="Dumbledore">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="dumbledore">
+        <img class="front" src="assets/images/AlbusDumbledore.jpg" alt="Dumbledore">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+
+    <div class="card" data-character="draco">
+        <img class="front" src="assets/images/DracoMalfoy.jpg" alt="Draco">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="draco">
+        <img class="front" src="assets/images/DracoMalfoy.jpg" alt="Draco">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+
+    <div class="card" data-character="dobby">
+        <img class="front" src="assets/images/Dobby.jpg" alt="Dobby">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="dobby">
+        <img class="front" src="assets/images/Dobby.jpg" alt="Dobby">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+
+    <div class="card" data-character="hagrid">
+        <img class="front" src="assets/images/RubeoHagrid.jpg" alt="Hagrid">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="hagrid">
+        <img class="front" src="assets/images/RubeoHagrid.jpg" alt="Hagrid">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+
+    <div class="card" data-character="sirius">
+        <img class="front" src="assets/images/SiriusBlack.jpg" alt="Sirius Black">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="sirius">
+        <img class="front" src="assets/images/SiriusBlack.jpg" alt="Sirius Black">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+
+    <div class="card" data-character="snape">
+        <img class="front" src="assets/images/SeverusSnape.jpg" alt="Snape">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="snape">
+        <img class="front" src="assets/images/SeverusSnape.jpg" alt="Snape">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+    <div class="card" data-character="arthur">
+        <img class="front" src="assets/images/ArthurWeasley.jpg" alt="ArthurWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="arthur">
+        <img class="front" src="assets/images/ArthurWeasley.jpg" alt="ArthurWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+    <div class="card" data-character="fred">
+        <img class="front" src="assets/images/FredWeasley.jpg" alt="FredWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="fred">
+        <img class="front" src="assets/images/FredWeasley.jpg" alt="FredWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+    <div class="card" data-character="george">
+        <img class="front" src="assets/images/GeorgeWeasley.jpg" alt="GeorgeWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="george">
+        <img class="front" src="assets/images/GeorgeWeasley.jpg" alt="GeorgeWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+    <div class="card" data-character="gina">
+        <img class="front" src="assets/images/GinaWeasley.jpg" alt="Gina">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="gina">
+        <img class="front" src="assets/images/GinaWeasley.jpg" alt="Gina">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    
+
+    <div class="card" data-character="minerva">
+        <img class="front" src="assets/images/MinervaMcGonagall.jpg" alt="MinervaMcGonagall">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="minerva">
+        <img class="front" src="assets/images/MinervaMcGonagall.jpg" alt="MinervaMcGonagall">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+
+    <div class="card" data-character="molly">
+        <img class="front" src="assets/images/MollyWeasley.jpg" alt="MollyWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+    <div class="card" data-character="molly">
+        <img class="front" src="assets/images/MollyWeasley.jpg" alt="MollyWeasley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+    <div class="card" data-character="vernon">
+        <img class="front" src="assets/images/VernonDursley.jpg" alt="VernonDursley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+
+    <div class="card" data-character="vernon">
+        <img class="front" src="assets/images/VernonDursley.jpg" alt="VernonDursley">
+        <img class="back" src="assets/images/turnedCard.jpg" alt="back side of the card">
+    </div>
+     
+    
+
+
+
+</div>
+
+
+ <footer>&copy; GabrielDT02 
+    <a href="https://github.com/GabrielDT02?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/gabriel-dineck-tremarin-784921231/" target="_blank"><i class="fab fa-linkedin" target="_blank"></i> </a>  
+   </footer> 
+   
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
